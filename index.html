@@ -27,8 +27,14 @@
                     <h4 class="mt-5">Kostenlose Anmeldung</h4>
                     <p>Ganz einfach anmelden und direkt ein Teil des Wissenstransfers sein!</p>
                     
+
+                    <div class="spinner-border" role="status" id="spinner">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+
+
                     <div style="overflow: hidden; width: 290px;">
-                        <iframe scrolling="no" src="https://werte-wissenstransfer.de/anmeldung/" style="border: 0px none; margin-left: -420px; margin-top: -800px; height: 1280px; width: 780px;">
+                        <iframe scrolling="no" onload="document.getElementById('spinner').style.display='none';" src="https://werte-wissenstransfer.de/anmeldung/" style="border: 0px none; margin-left: -420px; margin-top: -800px; height: 1280px; width: 780px;">
                         </iframe>
                     </div>
 
