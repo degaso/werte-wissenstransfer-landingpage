@@ -7,6 +7,7 @@ var https = require('https');
 const port = 8989;
 const puppeteer = require('puppeteer');
 const sendmail = require('sendmail')();
+const fs = require('fs');
 
 expressApp.use(bodyParser.json({
     limit: '50mb'
