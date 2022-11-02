@@ -1,4 +1,4 @@
-var apiDomain = 'https://degaso.de:8989/'
+var apiDomain = 'https://degaso.de:8787/'
 
 function sendAccount() {
     let data = {
