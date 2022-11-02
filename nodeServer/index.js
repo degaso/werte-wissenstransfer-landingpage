@@ -56,13 +56,13 @@ async function sendAccount(firstName, lastName, email, company) {
     await page.type('#form-field-email', email);
     await page.type('#form-field-field_1410b80', company);
     await page.click('#form-field-datenschutz')
-    // await page.click("button[type=submit]");
+    await page.click("button[type=submit]");
     await browser.close();
     console.log('done');
 
     sendmail({
         from: 'noreply@degaso.de',
-        to: 'valentin.kummert@gmail.com',
+        to: 'anmeldung@werte-wissenstransfer.de, info@degaso.de',
         subject: 'Neue Anmeldung bei Werte-Wissenstransfer',
         html: 'Es gab eine neue Anmeldung über die Landingpage! <br><br>'+firstName+'<br>'+lastName+'<br>'+email+'<br>'+company+'<br>',
     }, function (err, reply) {
