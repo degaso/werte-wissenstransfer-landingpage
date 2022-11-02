@@ -28,14 +28,30 @@
                     <p>Ganz einfach anmelden und direkt ein Teil des Wissenstransfers sein!</p>
                     
 
-                    <div class="spinner-border" role="status" id="spinner">
+                    <!-- <div class="spinner-border" role="status" id="spinner">
                         <span class="sr-only">Loading...</span>
-                    </div>
+                    </div> -->
 
-
-                    <div style="overflow: hidden; width: 290px;">
+                    <!-- <div style="overflow: hidden; width: 290px;">
                         <iframe scrolling="no" onload="document.getElementById('spinner').style.display='none';" src="https://werte-wissenstransfer.de/anmeldung/" style="border: 0px none; margin-left: -420px; margin-top: -800px; height: 1280px; width: 780px;">
                         </iframe>
+                    </div> -->
+
+                    <div id="formForRegistration" style="margin-bottom: 15px;">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Vorname" id="firstName">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Nachname" id="lastName">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email" id="email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Firma" id="company">
+                        </div>
+                        
+                        <button type="button" class="btn btn-secondary" style="background-color: #fbc86d; color: #545454;" onclick="sendAccount()">Registrieren</button>
                     </div>
 
                 </div>

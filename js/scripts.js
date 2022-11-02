@@ -1,7 +1,23 @@
-/*!
-* Start Bootstrap - Coming Soon v6.0.6 (https://startbootstrap.com/theme/coming-soon)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-coming-soon/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+var apiDomain = 'https://degaso.de:8989/'
+
+function sendAccount() {
+    let data = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        company: document.getElementById('company').value,
+      };
+      data = JSON.stringify(data);
+      fetch(apiDomain + "sendAccount", {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: data
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data != null) {
+            console.log('done')
+          }
+        })
+        .catch(err => { })
+}
