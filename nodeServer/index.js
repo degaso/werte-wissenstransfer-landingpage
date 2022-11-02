@@ -46,7 +46,8 @@ expressApp.post('/sendAccount', function (req, res, next) {
 
 async function sendAccount(firstName, lastName, email, company) {
     const browser = await puppeteer.launch({
-        headless: true
+        headless: true,
+        args: ['--no-sandbox']
     });
     const page = await browser.newPage();
     await page.goto('https://werte-wissenstransfer.de/anmeldung/');
