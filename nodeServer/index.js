@@ -31,8 +31,8 @@ try {
         key: fs.readFileSync('/etc/letsencrypt/live/blank42.de/privkey.pem'),
         cert: fs.readFileSync('/etc/letsencrypt/live/blank42.de/fullchain.pem'),
     }, app);
-    httpsServer.listen(port, () => {
-        console.log('HTTPS Server running on port '+ port);
+    httpsServer.listen(8787, () => {
+        console.log('HTTPS Server running on port '+ 8787);
     });
 } catch (error) {
     console.log('no ssl available')
