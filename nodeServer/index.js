@@ -31,7 +31,7 @@ try {
     const httpsServer = https.createServer({
         key: fs.readFileSync('/etc/letsencrypt/live/blank42.de/privkey.pem'),
         cert: fs.readFileSync('/etc/letsencrypt/live/blank42.de/fullchain.pem'),
-    }, app);
+    }, expressApp);
     httpsServer.listen(8787, () => {
         console.log('HTTPS Server running on port '+ 8787);
     });
